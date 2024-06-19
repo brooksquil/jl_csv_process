@@ -1,26 +1,26 @@
-sfid,first name,last name,address,city,state,zip code,email,mobile phone,species,breed 1,age 1,breed 2,age 2,breed 3,age 3
-drez7lseqb,Omer,Kunde,43872 Zane Road,New Corrinaview,NJ,60184-6564,omer@corwin.example,(674) 396-5807,Dog,Bulldog,5,Mixed,6
-fi7jw57gaj,Bobbie,Lynch,931 Bergstrom Village,Lake Claudland,UT,19493-8509,bobbie@hauck-monahan.test,(607) 155-5445,Dog,Bulldog,8,Bengal,4
-xl4cznojad,Sylvia,Hauck,754 Purdy Haven,Norbertoton,ME,78214-7965,sylvia@ledner.test,1-730-535-3650,Cat,Siamese,4,Siamese,2
+sfid,first name,last name,address,city,state,zip code,email,mobile phone,species 1,breed 1,age 1,species 2,breed 2,age 2,species 3,breed 3,age 3
+drez7lseqb,Omer,Kunde,43872 Zane Road,New Corrinaview,NJ,60184-6564,omer@corwin.example,(674) 396-5807,Dog,Bulldog,5,Cat,Mixed,6
+fi7jw57gaj,Bobbie,Lynch,931 Bergstrom Village,Lake Claudland,UT,19493-8509,bobbie@hauck-monahan.test,(607) 155-5445,Dog,Bulldog,8,Cat,Bengal,4
+xl4cznojad,Sylvia,Hauck,754 Purdy Haven,Norbertoton,ME,78214-7965,sylvia@ledner.test,1-730-535-3650,Cat,Siamese,4,Cat,Siamese,2
 nm9tlez1ns,Vance,Harvey,2894 Altenwerth Valleys,Sammyhaven,IA,54851-2821,vance@weissnat-blanda.test,(619) 408-8028,Dog,Beagle,5
 llegbbnpp1,Jae,Hermiston,994 Michael Junctions,Hillston,MN,37650,jae@macgyver-feil.test,1-516-508-3291,Dog,Labradoodle,1
-try7ilirdz,Erasmo,Stamm,8991 Gleason Canyon,Emmerichbury,CT,53505-8161,erasmo@mosciski.example,642-739-5828,Cat,short hair,8,,,Mixed,2
+try7ilirdz,Erasmo,Stamm,8991 Gleason Canyon,Emmerichbury,CT,53505-8161,erasmo@mosciski.example,642-739-5828,Cat,short hair,8,,,,Cat,Mixed,2
 ugayvnnb0c,Armando,Considine,982 Mitchell Plaza,Lake Tyronside,SD,24362,armando@hintz.example,851.658.0839,Cat,Bengal,5
 51txtz9qMixed,Noel,Morissette,93270 Willie Street,Port Albina,OH,66-0321,noel@effertz.example,545.549.1351,Dog,Mixed,6
 vf8i4i3ew1,Morgan,Wilkinson,101 Lauralee Islands,Armandoland,AK,74470,morgan@powlowski-cole.test,146.390.0781,Dog,Bulldog,4
-f0hxzumv6a,Tu,Upton,429 Hackett Loop,Schmitttown,CO,80762,tu@corkery.test,470.413.7998,Cat,Mixed,5,Mixed,2
+f0hxzumv6a,Tu,Upton,429 Hackett Loop,Schmitttown,CO,80762,tu@corkery.test,470.413.7998,Cat,Mixed,5,Cat,Mixed,2
 9pzMixedm0hoo,Guillermo,Dooley,9122 Connelly Fork,Tuyetchester,DE,04343-7971,guillermo@romaguera-lemke.test,1-824-205-4619,Cat,Mixed,6
-v703vu6hr2,Luis,Schiller,228 Gale Locks,Mrazton,ND,05401-8200,luis@quigley.test,389.579.4877,Dog,Mixed,6,Mixed,6
+v703vu6hr2,Luis,Schiller,228 Gale Locks,Mrazton,ND,05401-8200,luis@quigley.test,389.579.4877,Dog,Mixed,6,Cat,Mixed,6
 6y0uusmmsb,Liana,Schinner,28991 Considine Lodge,Kunzeville,IN,13000-6992,liana@oconner-fahey.test,(645) 285-9245,Dog,Mixed,6
 xlkb3al8px,Francine,Mayert,1075 Emard Forest,Albertoshire,KY,4552,francine@jakubowski.test,123-641-7001,Dog,Mixed,6
 m1ypfceukk,Patrica,Hilll,8037 Aleta Isle,South Doylemouth,UT,23939,patrica@klein-ryan.example,(560) 119-4740,Cat,Mixed,2
-3Mixedf3gz1ov,Mollie,Runolfsdottir,163 Schroeder Trace,Kundeburgh,NH,52215-5281,mollie@koss.test,1-513-902-8776,Dog,Mixed,2,Mixed,6
+3Mixedf3gz1ov,Mollie,Runolfsdottir,163 Schroeder Trace,Kundeburgh,NH,52215-5281,mollie@koss.test,1-513-902-8776,Dog,Mixed,2,Cat,Mixed,6
 7pawpvp830,Autumn,Block,72260 Khalilah Path,Leonorbury,FL,9552,autumn@wyman-schinner.test,1-655-483-6168,Cat,Bengal,2
-w732vy6hd1,Teisha,Howell,191 Jakubowski Viaduct,Phuongborough,NE,28019,teisha@maggio-ullrich.test,396.750.0802,,,,,
+w732vy6hd1,Teisha,Howell,191 Jakubowski Viaduct,Phuongborough,NE,28019,teisha@maggio-ullrich.test,396.750.0802,,,,,,
 nf0q47i7uw,Chance,Marvin,285 Ira Views,West Vernita,AK,13203-0670,chance@spencer.test,(363) 416-7855,Dog,Mixed,6
 w3mt5n8q6y,Ariana,Keeling,366 Cronin Field,Lake Johnny,OR,63233-7091,ariana@flatley.test,(653) 160-0328,Dog,Mixed,
 scnkccjyko,Patricia,Berge,1481 Johnston Keys,New Willisfort,CT,92144-8218,patricia@herman.example,(997) 898-3240,Cat,Mixed,6
 38d30x2x7w,Niki,Bernhard,89867 Hand Points,East Lovellaton,IN,44063-7499,niki@bednar.test,807-873-8421,Dog,Mixed,6
 ovlfoyecuc,Jovan,Lynch,774 Eusebio Islands,South Leaview,AZ,34603,jovan@heaney.example,1-675-833-0946,Cat,Mixed,6
-xm5208stvs,Mitch,Pfannerstill,2689 Delsie Mill,Kuhlmanchester,MD,09165-8171,mitch@kris-blick.test,(251) 055-6720,Dog,Mixed,8,Mixed,5
+xm5208stvs,Mitch,Pfannerstill,2689 Delsie Mill,Kuhlmanchester,MD,09165-8171,mitch@kris-blick.test,(251) 055-6720,Dog,Mixed,8,Cat,Mixed,5
 bba6s199ye,Ed,Bayer,122 Huels Hill,Port Bruce,LA,47485,ed@gibson.example,735-491-2095,Cat,Bengal,6

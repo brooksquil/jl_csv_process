@@ -7,9 +7,10 @@ def process_csv(in_file, out_file, first_object_field)
   object_index = 0
   # get headers and store in array separated by index of given first column name
   CSV.read(in_file, headers: true).headers.each_with_index do |h, i|
-    h == first_object_field ? (object_index = i.to_i) : 0
-    i < 10 ? (primary_headers << h) : (object_headers << h)
+    object_index = CSV.read(in_file, headers: true).headers.find_index(first_object_field).to_i
+    i < object_index ? (primary_headers << h) : (object_headers << h)
   end
+  puts primary_headers
   # Read the CSV file with headers
   CSV.foreach(in_file, headers: true) do |row|
     unique_id = row[0] # get unique id from first column
