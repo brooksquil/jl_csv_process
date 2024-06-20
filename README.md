@@ -8,7 +8,9 @@ My approach:
 
     1) I started with a brute force soltion specific to provided sample file to get a feel for working with the csv. This solution uses two args, in_file and out_file
 
-        run brute solution ```ruby brute.rb sol_client_vehicles.csv brute_results.csv```
+        run brute solution ```ruby
+                                ruby brute.rb sol_client_vehicles.csv brute_results.csv
+                            ```
 
     2) Next I made the code dynamic so that a file with the same data relationships but varying content could be processed. I felt like I needed one more user arg to determine where the object headers begin. I added the third arg, the first object header string, and use it to find the index, then split headers into primary and object header arrays. using those I was able to dynamically access and store the values in the parsed hash. I tested this solution by creating a second csv to consume with similiar primary columns and pets for objects and was able to get the desired output from each.
 
