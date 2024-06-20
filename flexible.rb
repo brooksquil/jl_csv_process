@@ -10,7 +10,6 @@ def process_csv(in_file, out_file, first_object_field)
     object_index = CSV.read(in_file, headers: true).headers.find_index(first_object_field).to_i
     i < object_index ? (primary_headers << h) : (object_headers << h)
   end
-  puts primary_headers
   # Read the CSV file with headers
   CSV.foreach(in_file, headers: true) do |row|
     unique_id = row[0] # get unique id from first column
