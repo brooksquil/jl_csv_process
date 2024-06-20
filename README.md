@@ -18,6 +18,7 @@ run dynamic solution:
                 -vehicles    ```
                                 ruby dynamic.rb sol_client_vehicles.csv dynamic_vehicles_results.csv "make"
                             ```
+
                 -pets        ```
                                 ruby dynamic.rb pets.csv dynamic_pets_results.csv "species"
                             ```
@@ -29,6 +30,7 @@ run automagical solution:
                 -vehicles    ```
                             ruby automagical.rb sol_client_vehicles.csv automagical_vehicle_results.csv "make"
                             ```
+                            
                 -pets        ```
                             ruby automagical.rb pets.csv automagical_pets_results.csv "species"
                             ```
