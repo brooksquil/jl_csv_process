@@ -1,35 +1,35 @@
 The challenge:
 
-    - create a flexible solution to process csv files with duplicate primary records representing multiple associated objects, and output a new file with each primary record contained in a single row with associated objects
-    - dynamicalyy label object column headers
-    - assume first column is unique id
+- create a flexible solution to process csv files with duplicate primary records representing multiple associated objects, and output a new file with each primary record contained in a single row with associated objects
+- dynamicalyy label object column headers
+- assume first column is unique id
 
 My approach:
 
-    1) I started with a brute force soltion specific to provided sample file to get a feel for working with the csv. This solution uses two args, in_file and out_file
+1) I started with a brute force soltion specific to provided sample file to get a feel for working with the csv. This solution uses two args, in_file and out_file
 
-        run brute solution ```ruby
+run brute solution          ```
                                 ruby brute.rb sol_client_vehicles.csv brute_results.csv
                             ```
 
-    2) Next I made the code dynamic so that a file with the same data relationships but varying content could be processed. I felt like I needed one more user arg to determine where the object headers begin. I added the third arg, the first object header string, and use it to find the index, then split headers into primary and object header arrays. using those I was able to dynamically access and store the values in the parsed hash. I tested this solution by creating a second csv to consume with similiar primary columns and pets for objects and was able to get the desired output from each.
+2) Next I made the code dynamic so that a file with the same data relationships but varying content could be processed. I felt like I needed one more user arg to determine where the object headers begin. I added the third arg, the first object header string, and use it to find the index, then split headers into primary and object header arrays. using those I was able to dynamically access and store the values in the parsed hash. I tested this solution by creating a second csv to consume with similiar primary columns and pets for objects and was able to get the desired output from each.
 
-        run dynamic solution:
-                vehicles ```ruby
-                            ruby dynamic.rb sol_client_vehicles.csv dynamic_vehicles_results.csv "make"
+run dynamic solution:
+                vehicles    ```
+                                ruby dynamic.rb sol_client_vehicles.csv dynamic_vehicles_results.csv "make"
                             ```
-                pets     ```ruby
+                pets        ```
                                 ruby dynamic.rb pets.csv dynamic_pets_results.csv "species"
                             ```
 
-    3) Automagical Solution ( I like the term ): I refactored thy dynamic solution to make it more efficient and concise.
+1) Automagical Solution ( I like the term ): I refactored thy dynamic solution to make it more efficient and concise.
 
 
-         run automagical solution:
-                vehicles ```ruby
+run automagical solution:
+                vehicles    ```
                             ruby automagical.rb sol_client_vehicles.csv automagical_vehicle_results.csv "make"
                             ```
-                pets     ```ruby
+                pets        ```
                             ruby automagical.rb pets.csv automagical_pets_results.csv "species"
                             ```
 
