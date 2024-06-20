@@ -4,40 +4,43 @@ def process_csv(in_file, out_file, first_object_field)
   parsed = {}
   primary_headers = []
   object_headers = []
-  object_index = 0
-  # get headers and store in array separated by index of given first column name
+
+  # get primary and object headers
   CSV.read(in_file, headers: true).headers.each_with_index do |h, i|
-    object_index = CSV.read(in_file, headers: true).headers.find_index(first_object_field).to_i
-    i < object_index ? (primary_headers << h) : (object_headers << h)
+    if h == first_object_field
+      object_headers = CSV.read(in_file, headers: true).headers[i..-1]
+      primary_headers = CSV.read(in_file, headers: true).headers[0...i]
+      break
+    end
   end
-  puts primary_headers
-  # Read the CSV file with headers
+
+  # process each row in the CSV
   CSV.foreach(in_file, headers: true) do |row|
-    unique_id = row[0] # get unique id from first column
-    if parsed.key?(unique_id) # Create or append to the parsed hash
-    else
-      primary_headers.each do |val|
-        parsed[unique_id] ||= {}  # create an empty hash if it doesn't exist
-        parsed[unique_id][val] = row[val]  # assign the value to the hash key
-        parsed[unique_id]['object count'] = 0  # add count for dynamic naming
-        parsed[unique_id]['objects'] = []  # add object store
-      end
+    unique_id = row[primary_headers.first] # Assuming first primary header is the unique id
+    # if not existing, create parsed record
+    parsed[unique_id] ||= {
+      'objects' => [],
+      'object count' => 0
+    }
+    # populate primary fields
+    primary_headers.each do |ph|
+      parsed[unique_id][ph] = row[ph]
     end
 
+    # populate object fields
     object_fields = {}
-    object_headers.each do |val|
-        object_fields[val] = row[val]  # get object values
+    object_headers.each do |oh|
+      object_fields[oh] = row[oh]
     end
 
-    parsed[unique_id]['objects'] << object_fields # add values to object array
-    parsed[unique_id]['object count'] += 1 # increase count
-
+    # add object fields and increase count
+    parsed[unique_id]['objects'] << object_fields
+    parsed[unique_id]['object count'] += 1
   end
 
-
-    new_headers = primary_headers # primary headers
-  # get the final object count for each unique_id
-    max_count = parsed.values.map{ |val| val['object count']}.max|| 0
+  # generate new headers for output
+  max_count = parsed.values.map{ |val| val['object count']}.max|| 0  # get the final object count for each unique_id
+  new_headers = primary_headers # primary headers to initialize array
     # Generate dynamic headers based on count
     (1..max_count).each { |i|
       object_headers.each do |oh|
@@ -46,32 +49,23 @@ def process_csv(in_file, out_file, first_object_field)
         ]
       end
     }
-  # Write the transformed data to a new CSV
-  CSV.open(out_file, 'w', write_headers: true, headers: new_headers) do |csv|
-    parsed.each{ |key, vals|
-      # set primary object rows based on unique_id
-      row = []
-      primary_headers.each do |ph|
-        row << vals[ph]
-      end
 
-      # add vehiclies to base row
-      vals['objects'].each { |obj|
-      object_headers.each do |oh|
-        row << obj[oh]
-      end
-      }
+  # Write to output CSV
+  CSV.open(out_file, 'w', write_headers: true, headers: new_headers) do |csv|
+    parsed.each do |key, vals|
+      row = primary_headers.map { |ph| vals[ph] }
+      vals['objects'].each { |obj| object_headers.each { |oh| row << obj[oh] } }
       csv << row
-    }
+    end
   end
 
-  puts "Processed #{in_file} and wrote results to #{out_file}"
+  puts "Multiple duplicate primary records from #{in_file} have been transformed and written to #{out_file} with single rows representing primary and multiple associated objects"
 end
 
-# get command line args
+# get user provided args
 in_file = ARGV[0]
 out_file = ARGV[1]
 first_object_field = ARGV[2]
 
 process_csv(in_file, out_file, first_object_field)
-
+# To Run - ruby script_name.rb input.csv output.csv first_object_field_name
