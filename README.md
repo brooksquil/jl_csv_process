@@ -4,6 +4,15 @@ The challenge:
 - dynamicalyy label object column headers
 - assume first column is unique id
 
+
+Updates:
+
+I have written a solution that uses no extra args. It is a bit more brittle in that it does not handle duplicate values in object rows. I'm sure with more time I could solve that, but I am pretty pleased I found a way t do this without extra args.
+
+run no_extra_args solution          ```
+                                ruby no_extra_args.rb sol_client_vehicles.csv no_extra_args_results.csv
+                            ```
+
 My approach:
 
 1) I started with a brute force soltion specific to provided sample file to get a feel for working with the csv. This solution uses two args, in_file and out_file
