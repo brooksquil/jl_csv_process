@@ -15,11 +15,10 @@ run brute solution          ```
 2) Next I made the code dynamic so that a file with the same data relationships but varying content could be processed. I felt like I needed one more user arg to determine where the object headers begin. I added the third arg, the first object header string, and use it to find the index, then split headers into primary and object header arrays. using those I was able to dynamically access and store the values in the parsed hash. I tested this solution by creating a second csv to consume with similiar primary columns and pets for objects and was able to get the desired output from each.
 
 run dynamic solution:
-                -vehicles    ```
+                            ```
                                 ruby dynamic.rb sol_client_vehicles.csv dynamic_vehicles_results.csv "make"
                             ```
-
-                -pets        ```
+                            ```
                                 ruby dynamic.rb pets.csv dynamic_pets_results.csv "species"
                             ```
 
@@ -27,11 +26,10 @@ run dynamic solution:
 
 
 run automagical solution:
-                -vehicles    ```
+                            ```
                             ruby automagical.rb sol_client_vehicles.csv automagical_vehicle_results.csv "make"
                             ```
-                            
-                -pets        ```
+                            ```
                             ruby automagical.rb pets.csv automagical_pets_results.csv "species"
                             ```
 
